@@ -4,44 +4,172 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Light Merge</title>
+<meta name="description" content="Light Merge is a glowing drop-and-merge puzzler by Blubalab. Drop two of the same light into each other and grow one tiny Spark into a blazing Supernova.">
 <style>
+  :root {
+    --bg: #0e101f;
+    --panel: #161933;
+    --panel-border: #2a2f52;
+    --text: #e7eaf5;
+    --muted: #9aa2c0;
+    --dim: #565e80;
+    --accent: #6fd0ff;
+  }
+  * { box-sizing: border-box; }
   body {
-    background: #0e101f;
-    color: #e7eaf5;
+    background: var(--bg);
+    color: var(--text);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-    min-height: 100vh;
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* Hero */
+  header {
     text-align: center;
-    padding: 24px;
+    padding: 64px 24px 40px;
   }
-  h1 {
-    color: #ffffff;
-    font-size: 2rem;
-    letter-spacing: 0.04em;
-    margin: 0 0 0.3em;
+  header img {
+    width: 100%;
+    max-width: 520px;
+    height: auto;
   }
-  p { color: #9aa2c0; margin: 0 0 2em; }
-  a.link {
-    color: #0e101f;
-    background: #6fd0ff;
+  .tagline {
+    color: var(--text);
+    font-size: 1.15rem;
+    max-width: 480px;
+    margin: 0.6em auto 0;
+  }
+  .status {
+    color: var(--dim);
+    font-size: 0.85rem;
+    margin: 1.2em 0 0;
+    letter-spacing: 0.02em;
+  }
+
+  /* Intro */
+  .intro {
+    text-align: center;
+    color: var(--muted);
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 0 24px 48px;
+  }
+  .intro strong { color: var(--text); }
+
+  /* Gallery */
+  .gallery {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    padding: 4px 24px 56px;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+  }
+  .gallery img {
+    scroll-snap-align: center;
+    height: 380px;
+    width: auto;
+    border-radius: 16px;
+    border: 1px solid var(--panel-border);
+    flex: 0 0 auto;
+  }
+
+  /* Features */
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    padding-bottom: 56px;
+  }
+  .feature {
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    border-radius: 12px;
+    padding: 20px 22px;
+  }
+  .feature h3 {
+    color: var(--accent);
+    font-size: 1rem;
+    margin: 0 0 0.5em;
+  }
+  .feature p {
+    color: var(--muted);
+    font-size: 0.92rem;
+    margin: 0;
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 24px 24px 56px;
+    color: var(--dim);
+    font-size: 0.85rem;
+  }
+  footer a {
+    color: var(--accent);
     text-decoration: none;
-    font-weight: 600;
-    padding: 12px 28px;
-    border-radius: 999px;
-    transition: opacity 0.15s ease;
   }
-  a.link:hover { opacity: 0.85; }
-  footer { margin-top: 3em; color: #565e80; font-size: 0.85rem; }
+  footer a:hover { text-decoration: underline; }
+  footer .sep { margin: 0 0.6em; color: var(--panel-border); }
 </style>
 </head>
 <body>
-  <h1>LIGHT MERGE</h1>
-  <p>A glowing drop-and-merge puzzler by Blubalab.</p>
-  <a class="link" href="/privacy/">Privacy Policy</a>
-  <footer>&copy; 2026 Blubalab</footer>
+
+<header>
+  <img src="img/logo.webp" alt="Light Merge">
+  <p class="tagline">Drop, merge, glow: grow one tiny Spark into a blazing Supernova.</p>
+  <p class="status">Closed testing on Android — coming to Google Play soon</p>
+</header>
+
+<p class="intro">
+  Drop two of the same light into each other and watch them become something brighter.
+  Keep merging and the chain climbs: <strong>Spark, Mote, Wisp, Faelight, Crystal, Pulsar,
+  Comet, Moon, Mini Sun</strong> — and finally, if you can hold the board together long
+  enough, the <strong>Supernova</strong>. No timer, nothing to read. Just drop, merge, and
+  try to keep the pile below the line.
+</p>
+
+<div class="gallery">
+  <img src="img/panel1.webp" alt="It all starts with one Spark">
+  <img src="img/panel6.webp" alt="One merge becomes a chain">
+  <img src="img/panel4.webp" alt="It never stops growing">
+  <img src="img/panel8.webp" alt="How far will you go?">
+</div>
+
+<div class="wrap features">
+  <div class="feature">
+    <h3>Every merge glows</h3>
+    <p>Light, sound, and a satisfying bit of camera shake on every merge — the bigger the
+    chain reaction, the bigger the payoff.</p>
+  </div>
+  <div class="feature">
+    <h3>A danger line that means it</h3>
+    <p>But a merciful continue when you cross it, because losing your whole board over one
+    bad drop isn't fun, it's just annoying.</p>
+  </div>
+  <div class="feature">
+    <h3>Something to work toward</h3>
+    <p>Charge your Energy Core with coins you earn and unlock a brand new Solar System each
+    time it's full — a whole new palette, backdrop, and chime for your chain.</p>
+  </div>
+  <div class="feature">
+    <h3>Respects your time and wallet</h3>
+    <p>Ads are always optional. One simple purchase removes them for good if you'd rather
+    never see one. Everything else is earned by playing.</p>
+  </div>
+</div>
+
+<footer>
+  <a href="/privacy/">Privacy Policy</a>
+  <span class="sep">&middot;</span>
+  &copy; 2026 Blubalab
+</footer>
+
 </body>
 </html>
