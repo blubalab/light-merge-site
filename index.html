@@ -45,10 +45,21 @@
     max-width: 480px;
     margin: 0.6em auto 0;
   }
+  .store {
+    display: inline-block;
+    margin-top: 1.4em;
+  }
+  /* Google's badge PNG carries its own transparent padding, so the visible
+     button is a little smaller than this box. */
+  .store img {
+    width: 230px;
+    max-width: 100%;
+    height: auto;
+  }
   .status {
     color: var(--dim);
     font-size: 0.85rem;
-    margin: 1.2em 0 0;
+    margin: 0.2em 0 0;
     letter-spacing: 0.02em;
   }
 
@@ -126,7 +137,10 @@
 <header>
   <img src="img/logo.webp" alt="Light Merge">
   <p class="tagline">Drop, merge, glow: grow one tiny Spark into a blazing Supernova.</p>
-  <p class="status">Closed testing on Android — coming to Google Play soon</p>
+  <a class="store" href="https://play.google.com/store/apps/details?id=com.blubalab.lightmerge">
+    <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play">
+  </a>
+  <p class="status">Free on Android &middot; iOS coming later</p>
 </header>
 
 <p class="intro">
@@ -166,8 +180,8 @@
   </div>
   <div class="feature">
     <h3>Respects your time and wallet</h3>
-    <p>Ads are always optional. One simple purchase removes them for good if you'd rather
-    never see one. Everything else is earned by playing.</p>
+    <p>Most ads are ones you choose to watch for a reward — a continue, a refill, a doubled
+    payout. One simple purchase removes them for good. Everything else is earned by playing.</p>
   </div>
 </div>
 
